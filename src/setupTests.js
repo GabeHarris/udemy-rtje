@@ -3,5 +3,5 @@ import Adapter from 'enzyme-adapter-react-16';
 
 configure({ adapter: new Adapter() });
 export { shallow, mount, render };
+export { findByTestAttr, checkProps } from '../test/testUtils';
 export default Enzyme;
-export { findByTestAttr } from '../test/testUtils';
