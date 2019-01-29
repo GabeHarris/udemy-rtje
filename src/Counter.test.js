@@ -1,6 +1,6 @@
 import React from 'react';
-import { Counter } from './Counter';
 import { shallow } from './setupTests';
+import { Counter } from './Counter';
 
 /** 
  * Factory function to create ShallowWrapper for the component.
