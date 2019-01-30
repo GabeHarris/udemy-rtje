@@ -12,7 +12,7 @@ const Congrats = (props) => {
   let congrats = <div data-test="component-congrats" />;
   if (props.success) {
     congrats = (
-      <div data-test="component-congrats">
+      <div data-test="component-congrats" className="alert alert-success">
         {message}
       </div>
     );
