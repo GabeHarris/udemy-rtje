@@ -8,9 +8,36 @@ const GuessedWords = (props) => {
     </div>
   );
   if (props.guessedWords.length > 0) {
+    const guessedWordRows = props.guessedWords.map((word, index) => {
+      return (
+        <tr key={index} data-test="guessed-word">
+          <td>
+            {word.guessedWord}
+          </td>
+          <td>
+            {word.letterMatchCount}
+          </td>
+        </tr>
+      );
+    });
     contents = (
-      <div data-test="guessed-words-table">
-        Something goes here
+      <div data-test="guessed-words-section">
+        <h3>Guessed Words</h3>
+        <table>
+          <thead>
+            <tr>
+              <th>
+                Guessed Word
+            </th>
+              <th>
+                Matching Letter Count
+            </th>
+            </tr>
+          </thead>
+          <tbody>
+            {guessedWordRows}
+          </tbody>
+        </table>
       </div>
     );
   }
